@@ -9,7 +9,7 @@ namespace MetaZelda
     /// <see cref="Symbol"/>s, <see cref="Room"/>s, and <see cref="Edge"/>s within
     /// the puzzle.
     /// </summary>
-    interface IDungeon
+    public interface IDungeon
     {
         /// <returns>The rooms within the dungeon.</returns>
         ICollection<Room> GetRooms();
