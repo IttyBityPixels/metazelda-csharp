@@ -84,10 +84,7 @@ namespace MetaZelda
 
         // TODO: verify that the second parameter is functionally equilalent to 'new Vec2ISet(Arrays.asList(coords))' in Java
         public Room(int id, Vec2I coords, Room parent, Symbol item, Condition precond)
-            : this(id, new Vec2ISet(new List<Vec2I>(coords)), parent, item, precond)
-        {
-
-        }
+            : this(id, new Vec2ISet(new List<Vec2I>(coords)), parent, item, precond) { }
 
         // TODO: Is it better to replace these Get and Set methods with a property?
         /// <returns> The intensity of the Room.</returns>
