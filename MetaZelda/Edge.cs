@@ -56,5 +56,33 @@ namespace MetaZelda
         {
             return symbol;
         }
+
+        /// <param name="symbol">The Symbol that must be obtained to pass along this Edge.</param>
+        public void SetSymbol(Symbol symbol)
+        {
+            this.symbol = symbol;
+        }
+        
+        /// <returns>The id of the Room being linked to.</returns>
+        public int GetTargetRoomId()
+        {
+            return targetRoomId;
+        }
+
+        // TODO: override GetHashCode()?
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !this.GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                Edge e = (Edge)obj;
+
+                return targetRoomId == e.targetRoomId
+                    && (symbol == e.symbol || symbol.Equals(e.symbol));
+            }
+        }
     }
 }
